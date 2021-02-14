@@ -20,7 +20,6 @@ const getImages = async (query) => {
     displayErrorMassage(`Something went wrong!!! Please Try Again Later D:)`);
     loadingSpinner();
   }
-
 }
 
 
@@ -132,6 +131,7 @@ const changeSlide = (index) => {
 }
 
 
+// click handler for search button 
 searchBtn.addEventListener('click', function () {
   document.querySelector('.main').style.display = 'none';
   clearInterval(timer);
@@ -140,9 +140,6 @@ searchBtn.addEventListener('click', function () {
   sliders.length = 0;
 
   document.getElementById('search').value = '';
-
-
-
 })
 
 // handler for keyPress 
@@ -171,6 +168,5 @@ const loadingSpinner = () => {
 // This function create for show display error massage 
 const displayErrorMassage = (massage) => {
   const getError = document.getElementById('display-error');
-  // console.log(massage);
   getError.innerHTML = massage;
 }
