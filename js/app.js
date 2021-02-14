@@ -139,6 +139,9 @@ searchBtn.addEventListener('click', function () {
   getImages(search);
   sliders.length = 0;
 
+  document.getElementById('search').value = '';
+
+
 
 })
 
@@ -152,8 +155,8 @@ keyPress.addEventListener('keypress', function (event) {
 
 
 sliderBtn.addEventListener('click', function () {
-  const footerTitle = document.getElementById('footer-title');
-  footerTitle.innerHTML = '';
+  // const footerTitle = document.getElementById('footer-title');
+  // footerTitle.innerHTML = '';
   createSlider();
 })
 
