@@ -74,8 +74,8 @@ const createSlider = () => {
   }
 
   // crate slider previous next area
-  const duration = document.getElementById('duration').value;
-  if (duration >= 1000 || duration == 2000) {
+  const duration = document.getElementById('duration').value || 1000;
+  if (duration >= 1000) {
     sliderContainer.innerHTML = '';
     const prevNext = document.createElement('div');
     prevNext.className = "prev-next d-flex w-100 justify-content-between align-items-center";
@@ -90,8 +90,6 @@ const createSlider = () => {
     // hide image aria
     imagesArea.style.display = 'none';
 
-
-    // const newDuration = parseInt(duration.value) || 1000;
     sliders.forEach(slide => {
       let item = document.createElement('div')
       item.className = "slider-item";
@@ -105,6 +103,8 @@ const createSlider = () => {
       slideIndex++;
       changeSlide(slideIndex);
     }, duration);
+  } else {
+    alert('Please Input Positive Value');
   }
 }
 
