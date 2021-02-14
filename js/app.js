@@ -56,8 +56,10 @@ const selectItem = (event, img) => {
   element.classList.toggle('added');
 
   let item = sliders.indexOf(img);
-  if (item == -1) {
+  if (item === -1) {
     sliders.push(img);
+  } else {
+    sliders = sliders.filter(item => item.indexOf(img));
   }
 }
 
