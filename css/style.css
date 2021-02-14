@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
@@ -59,6 +59,14 @@ img {
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   cursor: pointer;
+}
+#nav-list li a {
+  color: #17d8df;
+  font-weight: bold;
+  font-size: 25px;
+}
+#nav-list li a:hover{
+  color: #4d418b;
 }
 
 .prev,
