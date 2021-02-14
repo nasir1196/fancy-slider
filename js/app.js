@@ -17,7 +17,7 @@ const getImages = async (query) => {
     showImages(data.hits);
   }
   catch (error) {
-    displayErrorMassage("Something went wrong load this song!! please try again later");
+    displayErrorMassage(`Something went wrong!!! Please Try Again Later D:)`);
     loadingSpinner();
   }
 
@@ -42,11 +42,10 @@ const showImages = (images) => {
     gallery.appendChild(imgDiv);
 
   })
-  loadingSpinner();
   const footerTitle = document.getElementById('footer-title');
   footerTitle.innerHTML = '';
   footerTitle.innerHTML += `<p  class="text-center text-danger">Copyright&copy; 2021. All Rights Reserve | Programming Hero Team</p> `;
-
+  loadingSpinner();
 }
 
 
@@ -54,9 +53,10 @@ const showImages = (images) => {
 let slideIndex = 0;
 const selectItem = (event, img) => {
   let element = event.target;
+
   element.classList.toggle('added');
+
   let item = sliders.indexOf(img);
-  console.log('check items', item);
   if (item == -1) {
     sliders.push(img);
   }
@@ -139,6 +139,7 @@ searchBtn.addEventListener('click', function () {
   getImages(search);
   sliders.length = 0;
 
+
 })
 
 // handler for keyPress 
@@ -165,7 +166,8 @@ const loadingSpinner = () => {
 
 
 // This function create for show display error massage 
-const displayErrorMassage = (error) => {
-  const getError = document.getElementById('error-massage');
-  getError.innerText = error;
+const displayErrorMassage = (massage) => {
+  const getError = document.getElementById('display-error');
+  // console.log(massage);
+  getError.innerHTML = massage;
 }
