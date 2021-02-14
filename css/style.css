@@ -2,6 +2,7 @@ body {
   background-image: url(/image/bg.jpg);
   background-repeat: no-repeat;
 }
+
 #sliders {
   height: 400px;
   width: 60%;
@@ -9,11 +10,13 @@ body {
   margin: 0 auto;
   position: relative;
 }
+
 #logo {
   height: 80px;
   width: 200px;
   margin: 3px;
 }
+
 #logo img {
   height: 80px;
   width: 200px;
