@@ -28,7 +28,7 @@ const showImages = (images) => {
   imagesArea.style.display = 'block';
   const gallery = document.querySelector('.gallery');
   gallery.innerHTML = '';
-
+  
   // show gallery title
   galleryHeader.style.display = 'flex';
 
