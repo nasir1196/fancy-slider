@@ -1,4 +1,8 @@
-.set-background {
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
   background-image: url(../image/bg.jpg);
   background-repeat: no-repeat;
 }
